@@ -12,7 +12,7 @@
         android:id="@+id/imageView3"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -54,6 +54,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:hint="Nombres"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -71,6 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:hint="Apellidos"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:layout_constraintEnd_toEndOf="@+id/tilNombres"
                 app:layout_constraintStart_toStartOf="@+id/tilNombres"
                 app:layout_constraintTop_toBottomOf="@id/tilNombres"
@@ -88,7 +90,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:hint="Cédula"
+                android:hint="Correo electronico"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:layout_constraintEnd_toEndOf="@+id/tilApellidos"
                 app:layout_constraintStart_toStartOf="@+id/tilApellidos"
                 app:layout_constraintTop_toBottomOf="@id/tilApellidos"
@@ -115,6 +118,97 @@
                     android:layout_height="wrap_content"
                     android:hint="Fecha de nacimiento" />
             </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilfechanaci"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/tlfecha"
+                app:layout_constraintStart_toStartOf="@+id/tlfecha"
+                app:layout_constraintTop_toBottomOf="@+id/tlfecha">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="hint" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tildocum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/tilfechanaci"
+                app:layout_constraintStart_toStartOf="@+id/tilfechanaci"
+                app:layout_constraintTop_toBottomOf="@+id/tilfechanaci">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="hint" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dilnumdocu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/tildocum"
+                app:layout_constraintStart_toStartOf="@+id/tildocum"
+                app:layout_constraintTop_toBottomOf="@+id/tildocum">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="hint" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Género"
+                app:layout_constraintStart_toStartOf="@+id/dilnumdocu"
+                app:layout_constraintTop_toBottomOf="@+id/dilnumdocu" />
+
+            <RadioGroup
+                android:id="@+id/tilbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:orientation="horizontal"
+                android:scaleX="0.85"
+                android:scaleY="0.85"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/dilnumdocu"
+                app:layout_constraintStart_toStartOf="@+id/dilnumdocu"
+                app:layout_constraintTop_toBottomOf="@+id/dilnumdocu">
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Masculino" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Femenino" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Iniciar sesion"
+                app:layout_constraintEnd_toEndOf="@+id/tilbutton"
+                app:layout_constraintStart_toStartOf="@+id/tilbutton"
+                app:layout_constraintTop_toBottomOf="@+id/tilbutton" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

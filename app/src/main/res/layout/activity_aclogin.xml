@@ -36,7 +36,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:startIconDrawable="@drawable/mail_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24">
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:startIconDrawable="@drawable/email">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -51,8 +52,8 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
-        app:startIconDrawable="@drawable/lock_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:startIconDrawable="@drawable/cando"
         app:endIconMode="password_toggle">
 
         <com.google.android.material.textfield.TextInputEditText
