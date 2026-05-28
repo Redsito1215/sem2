@@ -14,10 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sem2">
         <activity
-            android:name=".listalumnos"
+            android:name=".supabase"
             android:exported="false" />
         <activity
-            android:name=".supabase"
+            android:name=".listalumnos"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
