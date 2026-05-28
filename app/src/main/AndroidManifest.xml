@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,10 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sem2">
         <activity
-            android:name=".loginBANCOPICHINCHA"
+            android:name=".supabase"
             android:exported="false" />
         <activity
-            android:name=".inicio_sesion"
+            android:name=".listalumnos"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +30,9 @@
             android:exported="false" />
         <activity
             android:name=".aclogin"
+            android:exported="false" />
+        <activity
+            android:name=".inicio_sesion"
             android:exported="false" />
     </application>
 
