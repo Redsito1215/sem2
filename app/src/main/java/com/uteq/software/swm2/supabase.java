@@ -44,11 +44,11 @@ public class supabase extends AppCompatActivity {
                     try {
                         StringBuilder texto = new StringBuilder();
                         for (int i = 0; i < response.length(); i++) {
-                            JSONObject jsonAlumno = response.getJSONObject(i).getJSONObject("data");
-                            texto.append((i+1) + ".- Nombres:   " + jsonAlumno.optString("nombres","") + "\n");
-                            texto.append("Correo " + jsonAlumno.optString("correo","")+ "\n");
-                            texto.append("Paralelo " + jsonAlumno.optString("paralelo","")+ "\n");
-                            texto.append("Periodo " + jsonAlumno.optString("periodoacademico","")+ "\n\n");
+                            JSONObject jsonAlumno = response.getJSONObject(i);
+                            texto.append((i + 1) + ".- Nombre: " + jsonAlumno.optString("apellidoynombre", "") + "\n");
+                            texto.append("Cedula: " + jsonAlumno.optString("cedula", "") + "\n");
+                            texto.append("Correo UTEQ: " + jsonAlumno.optString("CORREO INSTITUCIONAL", "") + "\n");
+                            texto.append("Correo Microsoft: " + jsonAlumno.optString("CORREO INSTITUCIONAL MICROSOFT", "") + "\n\n");
                         }
                         txtalumnos.setText(texto.toString());
                     } catch (Exception e) {
@@ -62,7 +62,7 @@ public class supabase extends AppCompatActivity {
             @Override
             public Map<String, String> getHeaders() {
                 Map<String, String> headers = new HashMap<>();
-                headers.put("apikey", "****");
+                headers.put("apikey", "");
                 return headers;
             }
         };

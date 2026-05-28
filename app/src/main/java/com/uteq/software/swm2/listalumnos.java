@@ -62,7 +62,7 @@ public class listalumnos extends AppCompatActivity {
             @Override
             public Map<String, String> getHeaders() {
                 Map<String, String> headers = new HashMap<>();
-                headers.put("x-api-key", "pub_bf56644bb321c3b811fdd148594b6f596de208551a5d8fc67e5e632f08e013a1");
+                headers.put("x-api-key", "");
                 return headers;
             }
         };
