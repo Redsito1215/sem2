@@ -13,6 +13,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="8dp"
+        android:contentDescription="Foto de perfil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,195 +23,200 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:text="Registro de Usuario"
         android:textAlignment="center"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="16dp"
         android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp">
 
-
+            <!-- Nombres -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilNombres"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:hint="Nombres"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:startIconDrawable="@drawable/text">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Nombres"
+                app:startIconDrawable="@android:drawable/ic_menu_myplaces">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etNombres"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!-- Apellidos -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilApellidos"
-                android:layout_width="0dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:hint="Apellidos"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:layout_constraintEnd_toEndOf="@+id/tilNombres"
-                app:layout_constraintStart_toStartOf="@+id/tilNombres"
-                app:layout_constraintTop_toBottomOf="@id/tilNombres"
-                app:startIconDrawable="@drawable/text">
+                app:startIconDrawable="@android:drawable/ic_menu_myplaces">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etApellidos"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
 
-
+            <!-- Correo electrónico -->
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilCedula"
-                android:layout_width="0dp"
+                android:id="@+id/tilCorreo"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:hint="Correo electronico"
+                android:hint="Correo electrónico"
+                app:startIconDrawable="@android:drawable/ic_dialog_email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCorreo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Teléfono móvil -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilTelefono"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:layout_constraintEnd_toEndOf="@+id/tilApellidos"
-                app:layout_constraintStart_toStartOf="@+id/tilApellidos"
-                app:layout_constraintTop_toBottomOf="@id/tilApellidos"
-                app:startIconDrawable="@drawable/text">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Teléfono móvil"
+                app:startIconDrawable="@android:drawable/ic_menu_call">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etCedula"
+                    android:id="@+id/etTelefono"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
+                    android:layout_height="wrap_content"
+                    android:inputType="phone" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tlfecha"
-                android:layout_width="0dp"
+                android:id="@+id/tilFecha"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                app:layout_constraintEnd_toEndOf="@+id/tilCedula"
-                app:layout_constraintStart_toStartOf="@+id/tilCedula"
-                app:layout_constraintTop_toBottomOf="@+id/tilCedula">
+                android:layout_marginTop="12dp"
+                android:hint="Fecha de nacimiento"
+                app:startIconDrawable="@android:drawable/ic_menu_today"
+                app:endIconMode="custom"
+                app:endIconDrawable="@android:drawable/ic_menu_today">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFecha"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Fecha de nacimiento" />
+                    android:focusable="false"
+                    android:inputType="none" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilfechanaci"
-                android:layout_width="0dp"
+                android:id="@+id/tilTipoDocumento"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                app:layout_constraintEnd_toEndOf="@+id/tlfecha"
-                app:layout_constraintStart_toStartOf="@+id/tlfecha"
-                app:layout_constraintTop_toBottomOf="@+id/tlfecha">
+                android:layout_marginTop="12dp"
+                android:hint="Tipo de documento"
+                app:startIconDrawable="@android:drawable/ic_menu_agenda">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <AutoCompleteTextView
+                    android:id="@+id/acTipoDocumento"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="hint" />
+                    android:focusable="false"
+                    android:inputType="none"
+                    tools:ignore="LabelFor" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tildocum"
-                android:layout_width="0dp"
+                android:id="@+id/tilNumeroDocumento"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                app:layout_constraintEnd_toEndOf="@+id/tilfechanaci"
-                app:layout_constraintStart_toStartOf="@+id/tilfechanaci"
-                app:layout_constraintTop_toBottomOf="@+id/tilfechanaci">
+                android:layout_marginTop="12dp"
+                android:hint="Número de documento"
+                app:startIconDrawable="@android:drawable/ic_menu_agenda">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNumeroDocumento"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="hint" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/dilnumdocu"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                app:layout_constraintEnd_toEndOf="@+id/tildocum"
-                app:layout_constraintStart_toStartOf="@+id/tildocum"
-                app:layout_constraintTop_toBottomOf="@+id/tildocum">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="hint" />
+                    android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="12dp"
                 android:text="Género"
-                app:layout_constraintStart_toStartOf="@+id/dilnumdocu"
-                app:layout_constraintTop_toBottomOf="@+id/dilnumdocu" />
+                android:textSize="16sp" />
 
             <RadioGroup
-                android:id="@+id/tilbutton"
-                android:layout_width="wrap_content"
+                android:id="@+id/rgGenero"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="19dp"
-                android:orientation="horizontal"
-                android:scaleX="0.85"
-                android:scaleY="0.85"
-                android:textSize="13sp"
-                app:layout_constraintEnd_toEndOf="@+id/dilnumdocu"
-                app:layout_constraintStart_toStartOf="@+id/dilnumdocu"
-                app:layout_constraintTop_toBottomOf="@+id/dilnumdocu">
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/radioButton"
+                    android:id="@+id/rbMasculino"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:checked="true"
                     android:text="Masculino" />
 
                 <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="match_parent"
+                    android:id="@+id/rbFemenino"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Femenino" />
 
+                <RadioButton
+                    android:id="@+id/rbOtro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Otro" />
             </RadioGroup>
 
             <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
+                android:id="@+id/btnGuardar"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Iniciar sesion"
-                app:layout_constraintEnd_toEndOf="@+id/tilbutton"
-                app:layout_constraintStart_toStartOf="@+id/tilbutton"
-                app:layout_constraintTop_toBottomOf="@+id/tilbutton" />
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#7B3FE4"
+                android:text="Guardar perfil"
+                android:textColor="#FFFFFF" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

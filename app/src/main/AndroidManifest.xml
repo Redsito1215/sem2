@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sem2">
         <activity
+            android:name=".bancologin"
+            android:exported="false" />
+        <activity
             android:name=".supabase"
             android:exported="false" />
         <activity
